@@ -11,10 +11,9 @@ function cavityMap(grid) {
             row[i] = "X"
             row = row.join("")
         }
-        
+
         if (!grid[rown][i+1]) {
             result.push(row)
-            console.log(i)
             i = 1
             rown++
             row = grid[rown]
@@ -24,5 +23,6 @@ function cavityMap(grid) {
     if (len > 1) {
         result.push(grid[len - 1])
     }
-    return result
+
+    return sum
 }
