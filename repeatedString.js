@@ -5,8 +5,13 @@ function repeatedString(s, n) {
 
         sum = s.substring(0, remain).match(/a/gi).length
     }
-    let subStr = s.match(/a/gi).length
-    sum += (subStr * parseInt(n / s.length))
-    return sum
-
+    let subStr = s.match(/a/gi)
+    if (subStr != null) {
+        subStr = subStr.length
+        sum += (subStr * parseInt(n / s.length))
+        return sum
+    }
+    else {
+        return 0
+    }
 }
